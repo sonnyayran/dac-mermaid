@@ -52,6 +52,11 @@ sequenceDiagram
     participant AzureAdministrator
     participant SQLServer
     participant Auditor
+    box Microsoft Entra ID
+        AzureKeyVault
+        SQLServer
+        
+    end
     DatabaseServerAdmin->>MicrosoftEntraID: (1) Register service principal for SQL Server instance
     AzureAdministrator->>AzureKeyVault: (2) Creates key vault. Imports/Creates master key. Authorizes the server instance to access Azure Key Vault.
     DatabaseServerAdmin->>SQLServer: (3) Install SQL Server connector.
