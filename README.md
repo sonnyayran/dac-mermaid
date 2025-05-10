@@ -25,6 +25,15 @@ The organization shall implement secure, centralized key storage to protect cryp
 3. Logging & Monitoring:
     - Enable detailed logging of key usage, access attempts, and administrative changes.
     - Integrate logs with SIEM for real-time monitoring and anomaly detection.
+4. Key Rotation and Expiration:
+    - Enforce automated key rotation at least annually or based on policy.
+    - Define maximum key lifespan and enforce decommissioning of deprecated keys
+5. Encryption Standards:
+    - Ensure keys use approved algorithms (e.g., AES-256, RSA-2048 or greater).
+    - Use envelope encryption where applicable.
+6. Backup and Recovery:
+    - Securely back up key material in an encrypted format.
+    - Implement tested recovery procedures to ensure availability during outages.
 
 ## Evidence of Compliance:
 - Configuration and architecture diagrams showing use of secure KMS.
