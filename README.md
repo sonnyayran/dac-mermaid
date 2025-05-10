@@ -17,9 +17,11 @@ The organization shall implement secure, centralized key storage to protect cryp
 
 ## Implementation Requirements:
 1. Key Management System (KMS):
-2. Use a cloud-native or enterprise KMS (e.g., AWS KMS, Azure Key Vault, Google Cloud KMS) that supports customer-managed keys (CMKs).
-3. Keys must be logically separated per application and data classification requirements.
-
+    - Use a cloud-native or enterprise KMS (e.g., AWS KMS, Azure Key Vault, Google Cloud KMS) that supports customer-managed keys (CMKs).
+    - Keys must be logically separated per application and data classification requirements.
+2. Access Control:
+    - Implement fine-grained access policies (e.g., IAM roles, ACLs) for key usage.
+    - Require MFA for privileged access to key management interfaces.
 
 ```mermaid
     C4Context
