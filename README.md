@@ -40,7 +40,7 @@ The organization shall implement secure, centralized key storage to protect cryp
 - IAM policy definitions restricting key access.
 - Key rotation schedules and logs.
 - Audit logs demonstrating key use and access.
-- FIPS 140-2 validation certificates (or CSP compliance attestations).
+- FIPS 140-2 validation certificates.
 
 ## Azure Key Management System Pattern
 
