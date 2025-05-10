@@ -42,6 +42,18 @@ The organization shall implement secure, centralized key storage to protect cryp
 - Audit logs demonstrating key use and access.
 - FIPS 140-2 validation certificates (or CSP compliance attestations).
 
+## Azure Key Management System Pattern
+
+
+```mermaid
+zenuml
+    Database Server Admin
+    Microsoft Entra ID
+    Database Server Admin->Microsoft Entra ID: Register service principal for SQL Server instance
+
+```
+
+
 ```mermaid
     C4Context
       title System Context diagram for Internet Banking System
