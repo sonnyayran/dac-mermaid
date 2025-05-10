@@ -45,7 +45,7 @@ The organization shall implement secure, centralized key storage to protect cryp
 ## Azure Key Management System Pattern
 
 ```mermaid
-zenuml
+sequenceDiagram
     title Azure KMS Pattern
     Database Server Admin
     Microsoft Entra ID
