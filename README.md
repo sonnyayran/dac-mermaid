@@ -1,4 +1,4 @@
-# Control Name: Secure Key Storage
+# Control Name: Secure Cloud Key Storage
 <b>Control ID:</b> KMS-01<br/>
 <b>Category:</b> Cryptographic Protections<br/>
 <b>Framework Alignment:</b> NIST SP 800-53 Rev. 5: SC-12, SC-28, SC-28(1), SC-34<br/>
