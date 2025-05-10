@@ -50,7 +50,7 @@ sequenceDiagram
     participant AzureAdministrator
     participant Auditor
     participant SQLServerOnPrem
-    box Microsoft Entra ID  
+    box lightblue Microsoft Entra ID  
         participant MicrosoftEntraID
         participant AzureKeyVault
         participant AzureSQLServer
