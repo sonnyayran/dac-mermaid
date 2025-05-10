@@ -44,9 +44,9 @@ The organization shall implement secure, centralized key storage to protect cryp
 
 ## Azure Key Management System Pattern
 
-
 ```mermaid
 zenuml
+    title Azure KMS Pattern
     Database Server Admin
     Microsoft Entra ID
     Database Server Admin->Microsoft Entra ID: Register service principal for SQL Server instance
