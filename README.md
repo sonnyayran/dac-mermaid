@@ -1,9 +1,9 @@
 # Control Name: Secure Key Storage
-Control ID: KMS-01
-Category: Cryptographic Protections
-Framework Alignment: NIST SP 800-53 Rev. 5: SC-12, SC-28, SC-28(1), SC-34
-Control Type: Technical
-Control Class: Preventive
+Control ID: KMS-01<br/>
+Category: Cryptographic Protections<br/>
+Framework Alignment: NIST SP 800-53 Rev. 5: SC-12, SC-28, SC-28(1), SC-34<br/>
+Control Type: Technical<br/>
+Control Class: Preventive<br/>
 
 ## Control Definition:
 The organization shall implement secure, centralized key storage to protect cryptographic keys used for data encryption, authentication, or digital signing. Key storage must be isolated from application code and data, enforce strict access controls, and provide capabilities for key rotation, versioning, and revocation. All cryptographic keys must be stored using a FIPS 140-2 or higher validated hardware security module (HSM) or equivalent cloud-native Key Management Service (KMS).
