@@ -48,6 +48,15 @@ The organization shall implement secure, centralized key storage to protect cryp
 sequenceDiagram
     participant DatabaseServerAdmin
     participant MicrosoftEntraID
+    participant AzureKeyVault
+    participant AzureAdministrator
+    participant SQLServer
+    participant Auditor
     DatabaseServerAdmin->>MicrosoftEntraID: Register service principal for SQL Server instance
+    AzureAdministrator->>AzureKeyVault: Creates key vault. Imports/Creates master key. Authorizes the server instance to access Azure Key Vault.
+    DatabaseServerAdmin->>SQLServer: Install SQL Server connector.
+    Auditor->>AzureKeyVault: Audits key usage.
+
+
 
 ```
