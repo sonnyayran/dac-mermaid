@@ -42,7 +42,7 @@ The organization shall implement secure, centralized key storage to protect cryp
 - Audit logs demonstrating key use and access.
 - FIPS 140-2 validation certificates.
 
-## Azure Key Management System Pattern
+## Azure Key Management System Security Pattern
 
 ```mermaid
 sequenceDiagram
