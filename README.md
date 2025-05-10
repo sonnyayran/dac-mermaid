@@ -36,7 +36,7 @@ The organization shall implement secure, centralized key storage to protect cryp
     - Implement tested recovery procedures to ensure availability during outages.
 
 ## Evidence of Compliance:
-- Configuration and architecture diagrams showing use of secure KMS.
+- Data flow diagram and architecture diagrams showing use of secure KMS.
 - IAM policy definitions restricting key access.
 - Key rotation schedules and logs.
 - Audit logs demonstrating key use and access.
