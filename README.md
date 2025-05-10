@@ -55,6 +55,7 @@ sequenceDiagram
         participant AzureKeyVault
         participant AzureSQLServer
     end
+    note over MicrosoftEntraID: Protect keys.<br/> Wrap or unwrao data encryption keys in the vault.
     DatabaseServerAdmin->>MicrosoftEntraID: (1) Register service principal for SQL Server instance
     AzureAdministrator->>AzureKeyVault: (2) Creates key vault.<br/> Imports/Creates master key.<br/> Authorizes the server instance to access Azure Key Vault.
     DatabaseServerAdmin->>AzureSQLServer: (3) Install SQL Server connector.
