@@ -46,10 +46,9 @@ The organization shall implement secure, centralized key storage to protect cryp
 
 ```mermaid
 sequenceDiagram
-    title Azure KMS Pattern
-    Database Server Admin
-    Microsoft Entra ID
-    Database Server Admin->Microsoft Entra ID: Register service principal for SQL Server instance
+    participant DatabaseServerAdmin
+    participant MicrosoftEntraID
+    DatabaseServerAdmin->MicrosoftEntraID: Register service principal for SQL Server instance
 
 ```
 
