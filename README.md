@@ -5,6 +5,26 @@
 <b>Control Type:</b> Technical<br/>
 <b>Control Class:</b> Preventive<br/>
 
+## Azure Key Management System Security Pattern
+```mermaid
+sequenceDiagram
+    participant DatabaseServerAdmin
+    participant AzureAdministrator
+    participant Auditor
+    participant SQLServerOnPrem
+    box purple Microsoft Entra ID  
+        participant MicrosoftEntraID
+        participant AzureKeyVault
+        participant AzureSQLServer
+    end
+    note over MicrosoftEntraID: Authenticate using service principal.<br/> Wrap or unwrap data encryption keys in the vault.
+    DatabaseServerAdmin->>MicrosoftEntraID: (1) Register service principal for SQL Server instance
+    AzureAdministrator->>AzureKeyVault: (2) Creates key vault.<br/> Imports/Creates master key.<br/> Authorizes the server instance to access Azure Key Vault.
+    DatabaseServerAdmin->>AzureSQLServer: (3) Install SQL Server connector.
+    SQLServerOnPrem->AzureSQLServer: SQL Server connector.
+    Auditor->>AzureKeyVault: (4) Audits key usage.
+
+```
 ## Control Definition:
 The organization shall implement secure, centralized key storage to protect cryptographic keys used for data encryption, authentication, or digital signing. Key storage must be isolated from application code and data, enforce strict access controls, and provide capabilities for key rotation, versioning, and revocation. All cryptographic keys must be stored using a FIPS 140-2 or higher validated hardware security module (HSM) or equivalent cloud-native Key Management Service (KMS).
 
@@ -41,25 +61,3 @@ The organization shall implement secure, centralized key storage to protect cryp
 - Key rotation schedules and logs.
 - Audit logs demonstrating key use and access.
 - FIPS 140-2 validation certificates.
-
-## Azure Key Management System Security Pattern
-
-```mermaid
-sequenceDiagram
-    participant DatabaseServerAdmin
-    participant AzureAdministrator
-    participant Auditor
-    participant SQLServerOnPrem
-    box purple Microsoft Entra ID  
-        participant MicrosoftEntraID
-        participant AzureKeyVault
-        participant AzureSQLServer
-    end
-    note over MicrosoftEntraID: Authenticate using service principal.<br/> Wrap or unwrap data encryption keys in the vault.
-    DatabaseServerAdmin->>MicrosoftEntraID: (1) Register service principal for SQL Server instance
-    AzureAdministrator->>AzureKeyVault: (2) Creates key vault.<br/> Imports/Creates master key.<br/> Authorizes the server instance to access Azure Key Vault.
-    DatabaseServerAdmin->>AzureSQLServer: (3) Install SQL Server connector.
-    SQLServerOnPrem->AzureSQLServer: SQL Server connector.
-    Auditor->>AzureKeyVault: (4) Audits key usage.
-
-```
